@@ -22,4 +22,12 @@ public class Main {
 
         return age;
     }
+
+    private static void formOutput(int age) {
+        if (age == 0) {
+            System.out.println("Please enter only a full age");
+
+        } else
+            System.out.println("Thank you! Your age was registered as: " + age);
+    }
 }
