@@ -26,9 +26,18 @@ public class Main {
         try {
             LOGGER.info("\n" + validate(temp));
 
-        }  catch (InvalidTempException ex) {
+        } catch (InvalidTempException ex) {
             System.out.println("Caught an exception.");
             System.out.println("An exception has occurred: " + ex);
+        }
+    }
+
+    static String validate(int temp) throws InvalidTempException {
+        if (temp >= -10 && temp <= 35) {
+            return "OK. Temperature: " + temp;
+        } else {
+            throw new InvalidTempException("\nTemperature " + temp +
+                    " is wrong!");
         }
     }
 
