@@ -13,4 +13,18 @@ public class Main {
         LOGGER.info("\n" + validate(getPrice(), funds));
     }
 
+    public static double getPrice() {
+        double price = 0;
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter price of the product: ");
+            price = scanner.nextDouble();
+            scanner.close();
+            return price;
+        } catch (InputMismatchException exception) {
+            System.out.println("Exception: " + exception);
+        }
+        return price;
+    }
+
 }
