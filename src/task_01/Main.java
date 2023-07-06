@@ -1,15 +1,19 @@
 package task_01;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Main {
 
     static int age;
 
+    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
 
-        formOutput(getInput());
+        LOGGER.info("\n" + formOutput(getInput()));
     }
+
 
     private static int getInput() {
 
@@ -25,11 +29,11 @@ public class Main {
         return age;
     }
 
-    private static void formOutput(int age) {
+    private static String formOutput(int age) {
         if (age == 0) {
-            System.out.println("Please enter only a full age");
-
-        } else
-            System.out.println("Thank you! Your age was registered as: " + age);
+            return "Please enter only a full age";
+        } else {
+            return "Thank you! Your age was registered as: " + age;
+        }
     }
 }
