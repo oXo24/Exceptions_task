@@ -7,6 +7,8 @@ public class Main {
     static int age;
 
     public static void main(String[] args) {
+
+        formOutput(getInput());
     }
 
     private static int getInput() {
