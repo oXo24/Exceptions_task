@@ -27,4 +27,13 @@ public class Main {
         return price;
     }
 
+    public static String validate(double price, double funds) {
+        if (funds < price) {
+            throw new ArithmeticException("\n Not enough funds for the purchase");
+        } else if (price == 0) {
+            return "Something went wrong!";
+        } else {
+            return "Transaction complete!" + "\nThank you for the purchase!";
+        }
+    }
 }
